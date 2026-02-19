@@ -1,4 +1,3 @@
-// components/Team/FounderSection.jsx
 import FounderTextBlock from "./FounderTextBlock";
 
 const employees = [
@@ -41,19 +40,14 @@ export default function FounderSection() {
           {employees.map((employee, index) => (
             <div key={index} className="col-12 col-md-4 col-lg-3">
               <div className="employee-card">
-                {/* Top Instagram-style caption */}
                 <div className="insta_caption d-flex align-items-center">
                   <h3>{employee.profile}</h3>
                   <h5 className="mb-0">{employee.name}</h5>
                 </div>
-
-                {/* Image hover wrapper */}
                 <div className="img-wrapper">
                   <img src={employee.img1} alt={employee.name} className="img-front" />
                   <img src={employee.img2} alt={employee.name} className="img-back" />
                 </div>
-
-                {/* Bottom caption */}
                 <div className="insta_caption d-block">
                   <p className="mb-2">{employee.role}</p>
                   <span className="hr"></span>
@@ -73,7 +67,6 @@ export default function FounderSection() {
           ))}
         </div>
 
-        {/* Text content below founders */}
         <FounderTextBlock />
       </div>
     </section>

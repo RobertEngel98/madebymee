@@ -11,7 +11,6 @@ export async function POST(req) {
       );
     }
 
-    // Transporter
     const transporter = nodemailer.createTransport({
       host: process.env.MAIL_SMTP,
       port: Number(process.env.MAIL_PORT),
@@ -22,15 +21,9 @@ export async function POST(req) {
       },
     });
 
-    // Email setup
     const mailData = {
       from: process.env.MAIL_USER,
-      to: "amirchampion30@gmail.com",
-      // to: "robert@talentsuite.io",
-      // to: ["robert@talentsuite.io", "Lukas@talentsuite.io","leander@talentsuite.io"],
-      // to: ["amirchampion30@gmail.com", "sarfraz@xefast.com"],
-
-      
+      to: "robert@talentsuite.io",
       subject: "Neue Nachricht von deiner Website",
       text: `Name: ${name}\nEmail: ${email}\n\nNachricht:\n${message}`,
     };
@@ -43,8 +36,7 @@ export async function POST(req) {
     );
 
   } catch (error) {
-    console.log("Error:", error);
-    alert(error)
+    console.error("SendMail Error:", error);
     return new Response(
       JSON.stringify({ status: "error", message: "Failed to send message" }),
       { status: 500 }

@@ -1,4 +1,3 @@
-// components/Team/EmployeeGrid.jsx
 import EmployeeCard from "./EmployeeCard";
 
 const employees = [

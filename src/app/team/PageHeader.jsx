@@ -1,4 +1,3 @@
-// components/Team/PageHeader.jsx
 export default function PageHeader() {
   return (
     <section className="pb-0 text-center">

@@ -4,12 +4,11 @@ import "./styles/button.css";
 import "./styles/responsiveness.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import GSAPSmoothProvider from "./components/GSAPSmoothProvider";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 
-/* ✅ Helvetica Neue (replacing Poppins & Rajdhani) */
+/* Helvetica Neue */
 const helvetica = localFont({
   src: [
     {
@@ -37,7 +36,7 @@ const helvetica = localFont({
   display: "swap",
 });
 
-/* ✅ Inter (NO CHANGE) */
+/* Inter */
 const inter = Inter({
   subsets: ["latin"],
   weight: ["700"],
@@ -46,14 +45,11 @@ const inter = Inter({
   display: "swap",
 });
 
-//Final Deployment
-
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${helvetica.variable} ${inter.variable}`}>
+    <html lang="de" className={`${helvetica.variable} ${inter.variable}`}>
       <head>
         <title>Madebymee</title>
-        {/* ✅ Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -67,17 +63,14 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
       </head>
 
-      <body style={{ height: "100%", overflow: "hidden" }}>
-        {/* ✅ Google Tag Manager (noscript) */}
+      <body>
         <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N7J9WLXF" height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>
         </noscript>
 
-        <GSAPSmoothProvider>
-          <Header />
-          {children}
-          <Footer />
-        </GSAPSmoothProvider>
+        <Header />
+        {children}
+        <Footer />
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
       </body>

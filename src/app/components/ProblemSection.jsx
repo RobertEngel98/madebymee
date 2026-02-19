@@ -15,7 +15,7 @@ const ProblemSection = () => {
             if (index !== -1) {
               setTimeout(() => {
                 entry.target.classList.add("show");
-              }, index * 500); // 0.5 sec delay per card
+              }, index * 500);
             }
           }
         });
@@ -57,7 +57,7 @@ const problemData = [
   },
   {
     title: "Marketing ohne Wirkung",
-    text: "Ihr postet, schaltet Ads oder probiert „ein bisschen was” aus – aber es kommt kaum messbar etwas zurück – weil Werbeanzeigen fehlen, die Botschaft nicht treffen und ohne Performance-Fokus kein konstanter Lead-Flow entsteht.",
+    text: "Ihr postet, schaltet Ads oder probiert „ein bisschen was" aus – aber es kommt kaum messbar etwas zurück – weil Werbeanzeigen fehlen, die Botschaft nicht treffen und ohne Performance-Fokus kein konstanter Lead-Flow entsteht.",
   },
   {
     title: "Mitarbeitermangel",

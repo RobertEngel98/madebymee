@@ -1,4 +1,3 @@
-// components/Team/EmployeeCard.jsx
 export default function EmployeeCard({ name, role, contact, email, img1, img2 }) {
   return (
     <div className="employee-card white-caption">
@@ -21,16 +20,6 @@ export default function EmployeeCard({ name, role, contact, email, img1, img2 })
       </div>
       <div className="insta_caption d-block white">
         <p className="mb-1">{role}</p>
-        {/* <div className="team_contact">
-          <span>
-            <i className="bi bi-telephone"></i>
-            {contact}
-          </span>
-          <span>
-            <i className="bi bi-envelope"></i>
-            {email}
-          </span>
-        </div> */}
       </div>
     </div>
   );

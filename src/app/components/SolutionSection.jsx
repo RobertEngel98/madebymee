@@ -10,7 +10,7 @@ const SolutionSection = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           sectionRef.current.classList.add("show");
-          observer.disconnect(); // 🔒 once only
+          observer.disconnect();
         }
       },
       { threshold: 0.4 },

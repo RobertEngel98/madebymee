@@ -61,7 +61,6 @@ header .btns i {
   transform: translate(-0px, -0px);
 }
 
-/* .hero_buttons */
 .hero_buttons {
   display: flex;
   gap: 25px;
